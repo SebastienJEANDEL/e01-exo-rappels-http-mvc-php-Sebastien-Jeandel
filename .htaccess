@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Définit dynamiquement l'URL de base du projet
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+RewriteRule ^(.*) - [E=BASE_URL:%1]
+
+# Nos URLs
+RewriteRule ^contact$ index.php?page=contact [L]
+RewriteRule ^api$ index.php?page=api [L]
+
+# Bonus pour voir l'intérêt de BASE_URL
+# RewriteRule ^contact\/show\/(\d+)$ index.php?page=contactShow&id=$1 [L]
+
+# Pour tout fichier n'existant pas, on utilise notre propre page 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php?page=error404 [L]

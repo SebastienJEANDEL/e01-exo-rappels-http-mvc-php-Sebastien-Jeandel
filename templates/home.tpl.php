@@ -1,0 +1,2 @@
+<h1>Je suis la home :)</h1>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi cum a consequatur temporibus sed accusamus nam accusantium eum ut, quae nihil doloribus dicta delectus consectetur dolores obcaecati voluptatibus corrupti architecto.</p>
